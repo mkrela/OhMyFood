@@ -1,0 +1,19 @@
+{
+  "name": "mkrela_3_15022021",
+  "version": "1.0.0",
+  "description": "Projet numéro 3 OpenClassroom\r #Ohmyfood",
+  "main": "index.js",
+  "scripts": {
+  "sass": "sass --watch ./sass/main.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkrela/mkrela_3_15022021.git"
+  },
+  "author": "Krela Matthieu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mkrela/mkrela_3_15022021/issues"
+  },
+  "homepage": "https://github.com/mkrela/mkrela_3_15022021#readme"
+}

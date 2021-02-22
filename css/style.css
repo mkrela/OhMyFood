@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+h1 {
+  font-family: "Shrikhand", sans-serif;
+  font-weight: normal;
+  font-size: 26px;
+}
+
+h2, h3, h4, h5, p, li, div, a {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.explore__button {
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  max-width: 15rem;
+  background: linear-gradient(to top left, #9356DC 20%, #FF79DA);
+  color: white;
+  margin-top: 15px;
+  padding: 0.3rem;
+  line-height: 3em;
+  text-align: center;
+  font-size: 1rem;
+  box-shadow: 2px 8px 8px rgba(176, 176, 176, 0.7333333333);
+  border-radius: 10rem;
+  font-weight: 500;
+}
+.explore__button:hover {
+  background: linear-gradient(to top left, #9356DC 50%, #FF79DA);
+  transform: scale(1.1);
+  transition: 0.4s ease-in-out;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+}
+
+.adress {
+  text-decoration: none;
+}
+
+header {
+  text-align: center;
+}
+header .header_logo {
+  margin-bottom: 0;
+  box-shadow: 0px 4px 4px #303030bb;
+}
+header .local {
+  background: rgba(227, 227, 227, 0.7333333333);
+  padding: 1rem;
+  border-bottom: 2px solid rgba(176, 176, 176, 0.7333333333);
+}
+header img {
+  height: 2.5rem;
+}
+
+@media all and (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media all and (min-width: ) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.container--menu .menu {
+  margin-bottom: 3rem;
+}
+@media all and (min-width: 1025px) {
+  .container--menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.explore {
+  background-color: white;
+  text-align: center;
+  padding-bottom: 4rem;
+}
+
+.fonctionnement {
+  margin-left: 0.6rem;
+  margin-right: 0;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.fonctionnement h2 {
+  padding-top: 20px;
+  padding-left: 7vh;
+}
+@media all and (min-width: 768px) {
+  .fonctionnement {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .fonctionnement h2 {
+    padding-left: 4vh;
+  }
+}
+@media all and (min-width: 1025px) {
+  .fonctionnement {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media all and (min-width: 768px) {
+  .fonctionnement {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.fonctionnement ol {
+  padding-left: 0;
+  list-style: none;
+  counter-reset: li;
+  white-space: nowrap;
+}
+.fonctionnement ol p {
+  display: inline-block;
+  margin: auto;
+  min-width: 80vw;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+  background-color: rgba(227, 227, 227, 0.7333333333);
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0.5rem 0.5rem 0.6rem rgba(176, 176, 176, 0.7333333333);
+}
+@media all and (min-width: 1025px) {
+  .fonctionnement ol p {
+    min-width: 20rem;
+  }
+}
+.fonctionnement ol p:hover {
+  background-color: rgba(201, 201, 201, 0.7333333333);
+  box-shadow: 0.5rem 0.5rem 0.4rem rgba(176, 176, 176, 0.7333333333);
+  cursor: pointer;
+}
+.fonctionnement ol p:hover i {
+  color: #9356DC;
+}
+.fonctionnement ol p li {
+  counter-increment: li;
+  cursor: pointer;
+  min-width: 30vh;
+}
+.fonctionnement ol p i {
+  font-size: 1.2rem;
+  padding-left: 30px;
+  padding-right: 20px;
+  color: #303030bb;
+}
+.fonctionnement ol p li::before {
+  content: counter(li);
+  position: relative;
+  left: 1rem;
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.2rem 0.6rem;
+  background-color: #9356DC;
+  border-radius: 50%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  background-color: rgba(227, 227, 227, 0.7333333333);
+}
+.container a {
+  display: flex;
+  flex-direction: column;
+}
+
+.restaurant {
+  position: relative;
+  width: 90%;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  margin: 2rem 0;
+  text-align: center;
+  box-shadow: 1px 1px 10px 5px rgba(176, 176, 176, 0.7333333333);
+  border-radius: 23px;
+}
+.restaurant img {
+  width: 100%;
+  height: 300px;
+  border-radius: 23px 23px 0 0;
+  object-fit: cover;
+}
+
+.restaurant__img--new {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  background-color: #33FF80;
+  border-radius: 6px;
+  padding: 2px 5px;
+  text-decoration: none;
+  color: #1a502e;
+}
+
+.restaurant__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  text-align: start;
+  padding: 10px 20px;
+}
+.restaurant__description h3 {
+  margin: 0;
+}
+.restaurant__description p {
+  margin: 0;
+}
+.restaurant__description .heart {
+  position: absolute;
+  top: 20%;
+  right: 3%;
+  color: #E49FE7;
+}
+
+footer {
+  background-color: #646464;
+  color: white;
+  list-style: none;
+  margin: 0;
+}
+footer ul {
+  list-style: none;
+  text-decoration: none;
+  margin: 0;
+  padding: 0 15px 40px;
+}
+footer ul li {
+  margin: 0;
+}
+footer h1 {
+  padding: 10px 30px;
+  margin: 0;
+  font-size: 20px;
+}
+footer a {
+  color: white;
+  font-style: normal;
+}
+
+article {
+  background-color: white;
+  width: 100%;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+article h2 {
+  padding-top: 0;
+  padding-left: 4vh;
+}
+
+/*# sourceMappingURL=style.css.map */

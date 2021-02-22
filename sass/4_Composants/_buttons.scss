@@ -1,0 +1,23 @@
+// Boutons //////////////////////////////////////////////////////
+
+.explore__button {
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    max-width: 15rem;
+    background: linear-gradient(to top left, $colour_primary 20%, $colour_secondary);
+    color: white;
+    margin-top: 15px;
+    padding: 0.3rem;
+    line-height: 3em;
+    text-align: center;
+    font-size: 1rem;
+    box-shadow: 2px 8px 8px $colour_grey2;
+    border-radius: map-get($radius,btn);
+    font-weight: 500;
+    &:hover{
+        background: linear-gradient(to top left,$colour_primary 50%, $colour_secondary);
+        transform: scale(1.10);
+        transition: .4s ease-in-out;
+    }
+}

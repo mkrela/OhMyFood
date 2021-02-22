@@ -1,0 +1,19 @@
+.container{
+    @include tablet{
+        display:grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    @include tv {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    &--menu{
+        & .menu{
+            margin-bottom:3rem;
+        }
+        @include desktop{
+            display:grid;
+            grid-template-columns: repeat(3,1fr);
+        }
+    }
+}

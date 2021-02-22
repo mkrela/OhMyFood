@@ -1,0 +1,17 @@
+// Media Queries ////////////////////////////////////////////////////////////////
+@mixin tablet {
+    @media all and (min-width: map-get($breakpoint, tablet)){
+        @content;
+    };
+}
+@mixin desktop {
+    @media all and (min-width: map-get($breakpoint, desktop)){
+        @content;
+    };
+}
+@mixin tv {
+    @media all and (min-width: map-get($breakpoint, tv)){
+        @content;
+    };
+}
+
