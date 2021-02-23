@@ -1,28 +1,29 @@
 // Couleurs /////////////////////////////////////////////////////////////////////////
 
-$colour_primary: #9356DC;
-$colour_secondary: #FF79DA;
+$colour_primary: #9356dc;
+$colour_primary-light: lighten($colour_primary, 8%);
+$colour_secondary: #ff79da;
+$colour_secondary-light: lighten($colour_secondary, 8%);
 $colour_third: #99e2d0;
 $colour_grey: #303030bb;
 $colour_grey2: lighten($colour_grey, 50%);
 $colour_grey3: lighten($colour_grey2, 20%);
 $colour_grey4: lighten($colour_grey3, 10%);
-$colour_green: #33FF80;
-$colour_green2: #1a502e;
+$colour_green: darken($colour_third, 50%);
 
 // Radius ///////////////////////////////////////////////////////////////////////////
 
-$radius:(
+$radius: (
     menu: 1rem,
     tag: 3rem,
     btn: 10rem,
-    propal: 1rem
+    propal: 1rem,
 );
 
 // Media Queries //////////////////////////////////////////////////////////////////////
 
-$breakpoint:(
+$breakpoint: (
     tablet: 768px,
     desktop: 1025px,
+    tv: 1600px,
 );
-

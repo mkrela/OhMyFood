@@ -19,21 +19,22 @@ a {
   display: block;
   margin: auto;
   max-width: 15rem;
-  background: linear-gradient(to top left, #9356DC 20%, #FF79DA);
+  background: linear-gradient(to top left, #9356dc 20%, #ff79da);
   color: white;
   margin-top: 15px;
   padding: 0.3rem;
   line-height: 3em;
   text-align: center;
   font-size: 1rem;
-  box-shadow: 2px 8px 8px rgba(176, 176, 176, 0.7333333333);
+  box-shadow: 2px 2px 10px 1px rgba(176, 176, 176, 0.7333333333);
   border-radius: 10rem;
   font-weight: 500;
+  -webkit-transition: background-color 4s ease;
 }
 .explore__button:hover {
-  background: linear-gradient(to top left, #9356DC 50%, #FF79DA);
-  transform: scale(1.1);
-  transition: 0.4s ease-in-out;
+  background: linear-gradient(to top left, #a978e3 20%, #ffa2e5);
+  -webkit-transition: background-color 4s ease;
+  box-shadow: 2px 2px 10px 1px #919191;
 }
 
 body {
@@ -44,8 +45,16 @@ body {
 
 .main {
   max-width: 1400px;
+  margin: auto;
   display: flex;
+  align-items: center;
+  text-align: center;
   flex-direction: column;
+}
+@media only screen and (min-width: 1400px) {
+  .main {
+    max-width: initial;
+  }
 }
 
 a {
@@ -72,75 +81,75 @@ header img {
   height: 2.5rem;
 }
 
-@media all and (min-width: 768px) {
-  .container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-@media all and (min-width: ) {
-  .container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-.container--menu .menu {
-  margin-bottom: 3rem;
-}
-@media all and (min-width: 1025px) {
-  .container--menu {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
+.decouvrez {
+  padding: 0 3rem;
 }
 
 .explore {
   background-color: white;
   text-align: center;
-  padding-bottom: 4rem;
+  padding-bottom: 1rem;
+}
+
+.fonctionnement__card {
+  position: relative;
+}
+
+.fonctionnement__pastille {
+  box-sizing: content-box;
+  position: absolute;
+  font-size: 15px;
+  top: 33%;
+  left: -1%;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 50%;
+  background-color: #9356dc;
 }
 
 .fonctionnement {
-  margin-left: 0.6rem;
-  margin-right: 0;
-  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  width: 100%;
   text-align: center;
 }
-.fonctionnement h2 {
-  padding-top: 20px;
-  padding-left: 7vh;
-}
-@media all and (min-width: 768px) {
+@media only screen and (min-width: 1400px) {
   .fonctionnement {
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 2rem;
   }
-  .fonctionnement h2 {
-    padding-left: 4vh;
+  .fonctionnement .fonctionnement__liste {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .fonctionnement .fonctionnement__card {
+    width: 25%;
   }
 }
-@media all and (min-width: 1025px) {
+@media only screen and (min-width: 1025px) and (max-width: 1399px) {
   .fonctionnement {
-    margin-left: 0;
-    margin-right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+  }
+  .fonctionnement .fonctionnement__liste {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .fonctionnement .fonctionnement__card {
+    width: 30%;
   }
 }
-@media all and (min-width: 768px) {
-  .fonctionnement {
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-.fonctionnement ol {
-  padding-left: 0;
-  list-style: none;
-  counter-reset: li;
-  white-space: nowrap;
-}
-.fonctionnement ol p {
+.fonctionnement .fonctionnement__card {
   display: inline-block;
   margin: auto;
-  min-width: 80vw;
   padding-top: 2rem;
   padding-bottom: 2rem;
   margin-top: 1.2rem;
@@ -151,39 +160,33 @@ header img {
   border-radius: 1rem;
   box-shadow: 0.5rem 0.5rem 0.6rem rgba(176, 176, 176, 0.7333333333);
 }
-@media all and (min-width: 1025px) {
-  .fonctionnement ol p {
+@media only screen and (min-width: 1025px) and (max-width: 1399px) {
+  .fonctionnement .fonctionnement__card {
     min-width: 20rem;
   }
 }
-.fonctionnement ol p:hover {
+.fonctionnement .fonctionnement__card:hover {
   background-color: rgba(201, 201, 201, 0.7333333333);
   box-shadow: 0.5rem 0.5rem 0.4rem rgba(176, 176, 176, 0.7333333333);
   cursor: pointer;
 }
-.fonctionnement ol p:hover i {
-  color: #9356DC;
+.fonctionnement .fonctionnement__card:hover i {
+  color: #9356dc;
 }
-.fonctionnement ol p li {
+.fonctionnement .fonctionnement__card li {
   counter-increment: li;
   cursor: pointer;
   min-width: 30vh;
 }
-.fonctionnement ol p i {
+.fonctionnement .fonctionnement__card i {
   font-size: 1.2rem;
   padding-left: 30px;
   padding-right: 20px;
   color: #303030bb;
 }
-.fonctionnement ol p li::before {
-  content: counter(li);
-  position: relative;
-  left: 1rem;
-  color: white;
-  font-size: 1.2rem;
-  padding: 0.2rem 0.6rem;
-  background-color: #9356DC;
-  border-radius: 50%;
+
+article {
+  background-color: rgba(227, 227, 227, 0.7333333333);
 }
 
 .container {
@@ -191,11 +194,31 @@ header img {
   flex-direction: column;
   text-align: center;
   align-items: center;
-  background-color: rgba(227, 227, 227, 0.7333333333);
 }
 .container a {
   display: flex;
   flex-direction: column;
+}
+@media only screen and (min-width: 1400px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1399px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    width: 100%;
+  }
 }
 
 .restaurant {
@@ -204,36 +227,73 @@ header img {
   background-color: white;
   color: black;
   text-decoration: none;
-  margin: 2rem 0;
+  margin: 1rem 0;
   text-align: center;
   box-shadow: 1px 1px 10px 5px rgba(176, 176, 176, 0.7333333333);
   border-radius: 23px;
 }
 .restaurant img {
   width: 100%;
-  height: 300px;
+  height: 200px;
   border-radius: 23px 23px 0 0;
   object-fit: cover;
+}
+@media only screen and (min-width: 1400px) {
+  .restaurant {
+    width: 20%;
+    margin: 2rem 0rem;
+  }
+  .restaurant img {
+    height: 200px;
+  }
+}
+@media only screen and (min-width: 1025px) and (max-width: 1399px) {
+  .restaurant {
+    width: 43%;
+    margin: 1rem;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .restaurant a {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .restaurant .restaurant__img {
+    width: 50%;
+    height: 180px;
+  }
+  .restaurant .restaurant__img img {
+    border-radius: 23px 0 0 23px;
+    height: 180px;
+  }
 }
 
 .restaurant__img--new {
   position: absolute;
   top: 25px;
   right: 25px;
-  background-color: #33FF80;
+  background-color: #99e2d0;
   border-radius: 6px;
   padding: 2px 5px;
   text-decoration: none;
-  color: #1a502e;
+  color: #1b6150;
 }
 
 .restaurant__description {
+  color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
   text-align: start;
-  padding: 10px 20px;
+  padding: 20px;
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .restaurant__description {
+    position: unset;
+  }
 }
 .restaurant__description h3 {
   margin: 0;
@@ -241,11 +301,44 @@ header img {
 .restaurant__description p {
   margin: 0;
 }
-.restaurant__description .heart {
+.restaurant__description .heart1 {
   position: absolute;
   top: 20%;
   right: 3%;
-  color: #E49FE7;
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .restaurant__description .heart1 {
+    font-size: 2rem;
+    right: 2%;
+    top: 75%;
+  }
+}
+.restaurant__description .heart2 {
+  position: absolute;
+  top: 20%;
+  right: 3%;
+  color: transparent;
+}
+.restaurant__description .heart2 :hover {
+  background: -webkit-linear-gradient(#9356dc, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.restaurant__description .heart2 :hover .heart1 {
+  display: none;
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .restaurant__description .heart2 {
+    font-size: 2.1rem;
+    right: 2%;
+    top: 75%;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .restaurant__description {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 footer {
@@ -271,17 +364,6 @@ footer h1 {
 footer a {
   color: white;
   font-style: normal;
-}
-
-article {
-  background-color: white;
-  width: 100%;
-  padding-top: 0px;
-  padding-bottom: 0px;
-}
-article h2 {
-  padding-top: 0;
-  padding-left: 4vh;
 }
 
 /*# sourceMappingURL=style.css.map */

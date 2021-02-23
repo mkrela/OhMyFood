@@ -1,99 +1,128 @@
+.decouvrez {
+    padding: 0 3rem;
+}
+
 .explore {
     background-color: white;
     text-align: center;
-    padding-bottom: 4rem;
+    padding-bottom: 1rem;
+}
+
+.fonctionnement__card {
+    position: relative;
+}
+
+.fonctionnement__pastille {
+    box-sizing: content-box;
+    position: absolute;
+    font-size: 15px;
+    top: 33%;
+    left: -1%;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 50%;
+    background-color: $colour_primary;
 }
 
 .fonctionnement {
-    margin-left: 0.6rem;
-    margin-right: 0;
-    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
     text-align: center;
-    & h2 {
-        padding-top: 20px;
-        padding-left: 7vh;
+    @include tv {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-bottom: 2rem;
+        .fonctionnement__liste {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+        .fonctionnement__card {
+            width: 25%;
+        }
     }
-    @include tablet{
-        margin-left: auto;
-        margin-right: auto;
-        & h2 {
-            padding-left: 4vh;
-        } 
+    @include desktop {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-bottom: 1rem;
+        .fonctionnement__liste {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .fonctionnement__card {
+            width: 30%;
+        }
     }
-    @include desktop{
-        margin-left: 0;
-        margin-right: 0;
-
-    }
-    @include tablet{
-        margin-left: auto;
-        margin-right: auto;
-    }
-        & ol {
-        padding-left: 0;
-        list-style: none;
-        counter-reset: li;
-        white-space: nowrap;
-            & p {
-            display: inline-block;
-            margin: auto;
-            min-width: 80vw;
-            padding-top: 2rem;
-            padding-bottom: 2rem;
-            margin-top: 1.2rem;
-            margin-bottom: 1.2rem;    
-            background-color: $colour_grey3;
-            font-weight: bold;
-            font-size: 1rem;
-            border-radius: map-get($radius, propal);
-            box-shadow: 0.5rem 0.5rem 0.6rem $colour_grey2;
-            @include desktop{
+    .fonctionnement__card {
+        display: inline-block;
+        margin: auto;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        margin-top: 1.2rem;
+        margin-bottom: 1.2rem;
+        background-color: $colour_grey3;
+        font-weight: bold;
+        font-size: 1rem;
+        border-radius: map-get($radius, propal);
+        box-shadow: 0.5rem 0.5rem 0.6rem $colour_grey2;
+        @include desktop {
             min-width: 20rem;
+        }
+        &:hover {
+            background-color: darken($colour_grey3, 10%);
+            box-shadow: 0.5rem 0.5rem 0.4rem $colour_grey2;
+            cursor: pointer;
+            & i {
+                color: $colour_primary;
             }
-                &:hover {
-                background-color: darken($colour_grey3, 10%);
-                box-shadow: 0.5rem 0.5rem 0.4rem $colour_grey2 ;
-                cursor: pointer;
-                    & i {
-                    color: $colour_primary;
-                    }
-                }
-                
-                & li {
-                    counter-increment: li;
-                    cursor: pointer;
-                    min-width: 30vh;
-                }
-                & i {
-                    font-size: 1.2rem;
-                    padding-left: 30px;
-                    padding-right: 20px;
-                    color: $colour_grey;
-                }
-                & li::before {
-                    content: counter(li);
-                    position: relative;
-                    left: 1rem;
-                    color: white;
-                    font-size: 1.2rem;
-                    padding: 0.2rem 0.6rem;
-                    background-color: $colour_primary;
-                    border-radius: 50%;            
-                }
-        
+        }
+
+        & li {
+            counter-increment: li;
+            cursor: pointer;
+            min-width: 30vh;
+        }
+        & i {
+            font-size: 1.2rem;
+            padding-left: 30px;
+            padding-right: 20px;
+            color: $colour_grey;
         }
     }
 }
+article {
+    background-color: $colour_grey3;
+}
 
 .container {
-    display:flex;
+    display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
-    background-color: $colour_grey3;
     a {
         display: flex;
         flex-direction: column;
+    }
+    @include tv {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: nowrap;
+    }
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    @include tablet {
+        width: 100%;
     }
 }
 
@@ -103,47 +132,106 @@
     background-color: white;
     color: black;
     text-decoration: none;
-    margin: 2rem 0;
+    margin: 1rem 0;
     text-align: center;
     box-shadow: 1px 1px 10px 5px $colour_grey2;
     border-radius: 23px;
     img {
         width: 100%;
-        height: 300px;
-        border-radius: 23px 23px 0 0 ;
+        height: 200px;
+        border-radius: 23px 23px 0 0;
         object-fit: cover;
+    }
+    @include tv {
+        width: 20%;
+        margin: 2rem 0rem;
+        img {
+            height: 200px;
+        }
+    }
+    @include desktop {
+        width: 43%;
+        margin: 1rem;
+    }
+    @include tablet {
+        a {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+        .restaurant__img {
+            width: 50%;
+            height: 180px;
+            img {
+                border-radius: 23px 0 0 23px;
+                height: 180px;
+            }
+        }
     }
 }
 
 .restaurant__img--new {
-    position: absolute; 
-    top : 25px;
+    position: absolute;
+    top: 25px;
     right: 25px;
-    background-color: $colour_green;
+    background-color: $colour_third;
     border-radius: 6px;
     padding: 2px 5px;
     text-decoration: none;
-    color: #1a502e ;
+    color: $colour_green;
 }
 
 .restaurant__description {
+    color: black;
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
     text-align: start;
-    padding: 10px 20px;
+    padding: 20px;
+    @include tablet {
+        position: unset;
+    }
     & h3 {
         margin: 0;
     }
     & p {
         margin: 0;
     }
-    .heart {
+    .heart1 {
         position: absolute;
         top: 20%;
         right: 3%;
-        color: #E49FE7;
+        @include tablet {
+            font-size: 2rem;
+            right: 2%;
+            top: 75%;
+        }
     }
-    
+
+    .heart2 {
+        position: absolute;
+        top: 20%;
+        right: 3%;
+        color: transparent;
+        & :hover {
+            background: -webkit-linear-gradient($colour_primary, $colour_secondary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            .heart1 {
+                display: none;
+            }
+        }
+        @include tablet {
+            font-size: 2.1rem;
+            right: 2%;
+            top: 75%;
+        }
+
+    }
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+    }
 }

@@ -1,16 +1,16 @@
 // Media Queries ////////////////////////////////////////////////////////////////
 @mixin tablet {
-    @media all and (min-width: map-get($breakpoint, tablet)){
+    @media only screen and (min-width: 769px) and (max-width: 1024px){
         @content;
     };
 }
 @mixin desktop {
-    @media all and (min-width: map-get($breakpoint, desktop)){
+    @media only screen and (min-width: 1025px) and (max-width: 1399px){
         @content;
     };
 }
 @mixin tv {
-    @media all and (min-width: map-get($breakpoint, tv)){
+    @media only screen and (min-width: 1400px){
         @content;
     };
 }
