@@ -1,17 +1,16 @@
 // Media Queries ////////////////////////////////////////////////////////////////
 @mixin tablet {
-    @media only screen and (min-width: 769px) and (max-width: 1024px){
+    @media only screen and (min-width: 481px) and (max-width: 1024px) {
         @content;
-    };
+    }
 }
 @mixin desktop {
-    @media only screen and (min-width: 1025px) and (max-width: 1399px){
+    @media only screen and (min-width: 1025px) and (max-width: 1399px) {
         @content;
-    };
+    }
 }
 @mixin tv {
-    @media only screen and (min-width: 1400px){
+    @media only screen and (min-width: 1400px) {
         @content;
-    };
+    }
 }
-
