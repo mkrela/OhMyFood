@@ -47,6 +47,15 @@
 .lds-roller {
   animation: spinner 4s ease-in-out;
   opacity: 0;
+  position: absolute;
+  left: 47%;
+  bottom: 40vh;
+}
+
+.spinner__position {
+  width: 100%;
+  height: 1px;
+  position: relative;
 }
 
 h1 {
@@ -90,6 +99,21 @@ body {
   width: 100%;
   margin: 0;
   box-sizing: border-box;
+}
+
+.main {
+  max-width: 1400px;
+  animation: body 4s ease-in-out;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+@media only screen and (min-width: 1400px) {
+  .main {
+    max-width: initial;
+  }
 }
 
 a {
