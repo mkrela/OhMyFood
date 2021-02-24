@@ -1,0 +1,38 @@
+@keyframes body {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    90% {
+        opacity: 0.2;
+    }
+    98% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.loading {
+    animation: body 4s ease-in-out;
+}
+
+@keyframes spinner {
+    0% {opacity: 1;};
+    30%{opacity: 0.8;}
+    50% {opacity: 0;}
+    70% {opacity: 0.8;}
+    80%{opacity: 1;}
+    90%{opacity: 0.6;}
+    100%{opacity: 0.3;}
+}
+
+
+.lds-roller {
+    animation: spinner 4s ease-in-out;
+    opacity: 0;
+}

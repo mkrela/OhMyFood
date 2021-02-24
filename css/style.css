@@ -1,5 +1,54 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+@keyframes body {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0.2;
+  }
+  98% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.loading {
+  animation: body 4s ease-in-out;
+}
+
+@keyframes spinner {
+  0% {
+    opacity: 1;
+  }
+  30% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0.3;
+  }
+}
+.lds-roller {
+  animation: spinner 4s ease-in-out;
+  opacity: 0;
+}
+
 h1 {
   font-family: "Shrikhand", sans-serif;
   font-weight: normal;
@@ -41,20 +90,6 @@ body {
   width: 100%;
   margin: 0;
   box-sizing: border-box;
-}
-
-.main {
-  max-width: 1400px;
-  margin: auto;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
-}
-@media only screen and (min-width: 1400px) {
-  .main {
-    max-width: initial;
-  }
 }
 
 a {
