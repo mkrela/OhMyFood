@@ -1,0 +1,94 @@
+header a {
+    text-decoration: none;
+    color: black;
+}
+
+.restaurant__menu--header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    img {
+        object-fit: cover;
+        height: 40vh;
+        width: 100%;
+    }
+}
+
+.restaurant__name {
+    box-sizing: border-box;
+    width: 100%;
+    bottom: 0;
+    background-color: #f4f4f4;
+    border-radius: 25px 25px 0 0;
+    box-shadow: -4 0 15px $colour_grey;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    h1 {
+        font-size: 2rem;
+        padding-left: 3vw;
+    }
+    .heart1 {
+        position: absolute;
+        right: 5vw;
+        top: 33%;
+        font-size: 2rem;
+    }
+    .heart2 {
+        position: absolute;
+        right: 5vw;
+        top: 33%;
+        color: transparent;
+        font-size: 2rem;
+        &:hover {
+            color: $colour_primary;
+            transform: scale(1.1);
+            transition: 0.2s ease-in-out;
+        }
+    }
+}
+
+.plats {
+    width: 100%;
+    background-color: #F4F4F4;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    @include desktop{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    @include tv {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .plats__type {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 2rem;
+        @include tv {
+            width: 33%;
+        }
+        @include desktop {
+            width: 33%;
+        }
+        .plats__card {
+            background-color: white;
+            margin-top: 20px;
+            border-radius: 30px;
+            padding: 0 1rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .plats__card--name {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .plats__card--price {
+                margin-top: 35px;
+            }
+        }
+    }
+}
