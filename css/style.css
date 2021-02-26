@@ -49,11 +49,12 @@
   }
 }
 .lds-roller {
-  animation: spinner 4s ease-in;
+  box-sizing: content-box;
+  animation: spinner 4s ease-in-out;
   scale: 1;
   opacity: 0;
   position: absolute;
-  left: 46%;
+  left: 50%;
   bottom: 0;
 }
 
@@ -73,6 +74,18 @@
     opacity: 100%;
   }
 }
+.plats__card--one {
+  animation: menu 1s ease-in-out;
+}
+
+.plats__card--two {
+  animation: menu 2s ease-in-out;
+}
+
+.plats__card--three {
+  animation: menu 3s ease-in-out;
+}
+
 h1 {
   font-family: "Shrikhand", sans-serif;
   font-weight: normal;
@@ -112,6 +125,7 @@ a {
 
 body {
   width: 100%;
+  min-width: 400px;
   margin: 0;
   box-sizing: border-box;
 }
@@ -643,9 +657,6 @@ header a {
   flex-direction: column;
   padding: 0;
 }
-.plats .plats__type h2 {
-  padding-left: 2rem;
-}
 @media only screen and (min-width: 1400px) {
   .plats .plats__type {
     width: 33%;
@@ -661,57 +672,96 @@ header a {
   white-space: nowrap;
   text-overflow: ellipsis;
   position: relative;
-  margin: 0;
+  margin: 1vh 2vw;
   padding: 0;
   overflow: hidden;
-  animation: menu 1s ease-in-out;
   background-color: white;
-  margin-top: 20px;
-  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(176, 176, 176, 0.7333333333);
+  border-radius: 20px;
   padding: 0 1rem;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 .plats .plats__type .plats__card .plats__card--name {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-}
-.plats .plats__type .plats__card .plats__card--name h3 {
-  margin: 0;
-  padding: 0;
-}
-.plats .plats__type .plats__card .plats__card--description {
+  justify-content: flex-start;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  flex-wrap: wrap;
+  margin: 0;
+  padding: 1em 0;
+}
+.plats .plats__type .plats__card .plats__card--name h3 {
+  margin: 0;
+  padding-bottom: 0.7rem;
+  font-weight: bold;
+}
+.plats .plats__type .plats__card .plats__card--description {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.plats .plats__type .plats__card .plats__card--description div {
+  padding-right: 4em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  box-sizing: border-box;
 }
 .plats .plats__type .plats__card .plats__card--price {
-  width: 20%;
+  position: absolute;
+  top: 42%;
+  right: 1%;
+  font-size: 1.3em;
+  font-weight: bolder;
+  width: 15%;
   text-align: end;
-  padding-top: 1em;
+  margin-left: 1em;
 }
 
-.plats__card .check-box {
+.underline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+}
+.underline h2 {
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.underline__position {
+  width: 10%;
+  height: 4px;
+  background-color: #99e2d0;
+}
+
+.check-box {
   position: absolute;
   display: flex;
   right: 0;
   top: 0;
   height: 100%;
-  width: 20%;
+  width: 15%;
   background-color: #99e2d0;
-  transform: translateX(100%);
-  transition: transform 0.2s;
+  transform: translateX(150%);
+  transition: transform 0.3s;
 }
-.plats__card .check-box .fa-check-circle {
+.check-box .fa-check-circle {
   cursor: pointer;
   margin: auto;
   font-size: 1.6rem;
   color: white;
   transform: rotate(0);
-  transition: transform 0.5s;
+  transition: transform 1s ease-out;
 }
 
 .plats__card:hover {
@@ -725,7 +775,7 @@ header a {
 }
 .plats__card:hover .plats__card--price {
   transform: translateX(-100%);
-  transition-duration: 0.1s;
+  transition-duration: 0.3s;
 }
 
 /*# sourceMappingURL=style.css.map */

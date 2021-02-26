@@ -68,9 +68,6 @@ header a {
         display: flex;
         flex-direction: column;
         padding: 0;
-        h2 {
-            padding-left: 2rem;
-        }
         @include tv {
             width: 33%;
         }
@@ -82,60 +79,94 @@ header a {
             white-space: nowrap;
             text-overflow: ellipsis;
             position: relative;
-            margin: 0;
+            margin: 1vh 2vw;
             padding: 0;
             overflow: hidden;
-            animation: menu 1s ease-in-out;
             background-color: white;
-            margin-top: 20px;
-            border-radius: 30px;
+            box-shadow: 0 0 10px $colour_grey2;
+            border-radius: 20px;
             padding: 0 1rem;
             display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+            flex-direction: column;
+            justify-content: flex-start;
             .plats__card--name {
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
-                h3 {
-                    margin: 0;
-                    padding: 0;
-                }
-            }
-            .plats__card--description {
+                justify-content: flex-start;
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
-                flex-wrap: wrap;
+                margin: 0;
+                padding: 1em 0;
+                h3 {
+                    margin: 0;
+                    padding-bottom: 0.7rem;
+                    font-weight: bold;
+                }
+            }
+            .plats__card--description {
+                display: flex;
+                box-sizing: border-box;
+                flex-direction: row;
+                justify-content: space-between;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                div {
+                    padding-right: 4em;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    box-sizing: border-box;
+                }
             }
             .plats__card--price {
-                width: 20%;
+                position: absolute;
+                top: 42%;
+                right: 1%;
+                font-size: 1.3em;
+                font-weight: bolder;
+                width: 15%;
                 text-align: end;
-                padding-top: 1em;
+                margin-left: 1em;
             }
         }
     }
 }
-
-.plats__card {
-    .check-box {
-        position: absolute;
-        display: flex;
-        right: 0;
-        top: 0;
-        height: 100%;
-        width: 20%;
-        background-color: $colour-third;
-        transform: translateX(100%);
-        transition: transform 0.2s;
-        & .fa-check-circle {
-            cursor: pointer;
-            margin: auto;
-            font-size: 1.6rem;
-            color: white;
-            transform: rotate(0);
-            transition: transform 0.5s;
-        }
+.underline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    h2 {
+        font-weight: 400;
+        margin-bottom: 5px;
+    }
+}
+.underline__position {
+    width: 10%;
+    height: 4px;
+    background-color: $colour_third;
+}
+.check-box {
+    position: absolute;
+    display: flex;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 15%;
+    background-color: $colour-third;
+    transform: translateX(150%);
+    transition: transform 0.3s;
+    .fa-check-circle {
+        cursor: pointer;
+        margin: auto;
+        font-size: 1.6rem;
+        color: white;
+        transform: rotate(0);
+        transition: transform 1s ease-out;
     }
 }
 
@@ -149,6 +180,6 @@ header a {
     }
     .plats__card--price {
         transform: translateX(-100%);
-        transition-duration: 0.1s;
+        transition-duration: 0.3s;
     }
 }

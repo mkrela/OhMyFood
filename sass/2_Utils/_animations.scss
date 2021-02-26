@@ -49,11 +49,12 @@
 }
 
 .lds-roller {
-    animation: spinner 4s ease-in;
+    box-sizing: content-box;
+    animation: spinner 4s ease-in-out;
     scale: 1;
     opacity: 0;
     position: absolute;
-    left: 46%;
+    left: 50%;
     bottom: 0;
 }
 
@@ -63,7 +64,6 @@
     position: relative;
 }
 
-
 @keyframes menu {
     0% {
         transform: translateY(30%);
@@ -71,6 +71,18 @@
     }
     100% {
         transform: translateY(0%);
-        opacity:100%;
+        opacity: 100%;
     }
+}
+
+.plats__card--one {
+    animation: menu 1s ease-in-out;
+}
+
+.plats__card--two {
+    animation: menu 2s ease-in-out;
+}
+
+.plats__card--three {
+    animation: menu 3s ease-in-out;
 }
