@@ -13,6 +13,7 @@ body {
     align-items: center;
     text-align: center;
     flex-direction: column;
+    background-color: #F4F4F4;
     @include tv {
         max-width: initial;
     }

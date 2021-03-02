@@ -138,6 +138,7 @@ body {
   align-items: center;
   text-align: center;
   flex-direction: column;
+  background-color: #F4F4F4;
 }
 @media only screen and (min-width: 1400px) {
   .main {
@@ -636,7 +637,6 @@ header a {
   width: 100%;
   background-color: #f4f4f4;
   margin: 0;
-  padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
 }
@@ -776,6 +776,20 @@ header a {
 .plats__card:hover .plats__card--price {
   transform: translateX(-100%);
   transition-duration: 0.3s;
+}
+
+.bouton__commander {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+  padding: 2rem;
+  background-color: #F4F4F4;
+}
+.bouton__commander .commander {
+  margin: auto;
+  font-size: 1.5rem;
+  padding: 1px 5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
