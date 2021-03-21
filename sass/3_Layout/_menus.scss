@@ -42,9 +42,7 @@ header a {
         color: transparent;
         font-size: 2rem;
         &:hover {
-            color: $colour_primary;
-            transform: scale(1.1);
-            transition: 0.2s ease-in-out;
+            animation: fillheart 150ms linear forwards;
         }
     }
 }

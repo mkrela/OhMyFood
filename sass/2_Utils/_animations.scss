@@ -84,3 +84,39 @@
 .plats__card--three {
     animation: menu 3s ease-in-out;
 }
+
+@keyframes fillheart
+{
+    0%{
+        opacity: 0.1;  
+        background-image: linear-gradient($colour_secondary, $colour_primary);
+        background-clip: text;
+        text-fill-color: transparent;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;  
+    }
+
+    20%{
+        opacity: 0.2;
+    }
+
+    40%{
+        opacity: 0.4;
+    }
+
+    60%{
+        opacity: 0.6;
+    }
+
+    80%{
+        opacity: 0.8;
+    }
+
+    100%{
+        opacity: 1;
+        background-image: linear-gradient($colour_secondary, $colour_primary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}

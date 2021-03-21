@@ -84,6 +84,35 @@
   animation: menu 3s ease-in-out;
 }
 
+@keyframes fillheart {
+  0% {
+    opacity: 0.1;
+    background-image: linear-gradient(#ff79da, #9356dc);
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  40% {
+    opacity: 0.4;
+  }
+  60% {
+    opacity: 0.6;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+    background-image: linear-gradient(#ff79da, #9356dc);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
 h1 {
   font-family: "Shrikhand", sans-serif;
   font-weight: normal;
@@ -402,7 +431,7 @@ article {
   }
 }
 .restaurant__description .heart1 :hover {
-  color: transparent;
+  animation: fillheart 150ms linear forwards;
 }
 .restaurant__description .heart2 {
   position: absolute;
@@ -412,9 +441,7 @@ article {
   color: transparent;
 }
 .restaurant__description .heart2 :hover {
-  background-color: #9356dc;
-  -webkit-background-clip: text;
-  transition: 0.3s ease-in-out;
+  animation: fillheart 150ms linear forwards;
 }
 @media only screen and (min-width: 481px) and (max-width: 1024px) {
   .restaurant__description .heart2 {
@@ -626,9 +653,7 @@ header a {
   font-size: 2rem;
 }
 .restaurant__name .heart2:hover {
-  color: #9356dc;
-  transform: scale(1.1);
-  transition: 0.2s ease-in-out;
+  animation: fillheart 150ms linear forwards;
 }
 
 .plats {

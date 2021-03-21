@@ -223,7 +223,7 @@ article {
             top: 75%;
         }
         & :hover {
-            color: transparent;
+            animation: fillheart 150ms linear forwards;
         }
     }
 
@@ -234,9 +234,7 @@ article {
         right: 7%;
         color: transparent;
         & :hover {
-            background-color: $colour_primary;
-            -webkit-background-clip: text;
-            transition: 0.3s ease-in-out;
+            animation: fillheart 150ms linear forwards;
         }
         @include tablet {
             font-size: 2rem;
