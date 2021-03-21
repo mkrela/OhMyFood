@@ -17,7 +17,7 @@
 }
 
 .loading {
-    animation: body 4s ease-in-out;
+    animation: body 2s ease-in-out;
 }
 
 @keyframes spinner {
@@ -50,7 +50,7 @@
 
 .lds-roller {
     box-sizing: content-box;
-    animation: spinner 4s ease-in-out;
+    animation: spinner 2s ease-in-out;
     scale: 1;
     opacity: 0;
 }
