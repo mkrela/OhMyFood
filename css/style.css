@@ -190,6 +190,10 @@ input {
   font-size: 1.3rem;
 }
 
+.container {
+  width: 100%;
+}
+
 .reservez {
   padding: 0 1.5rem;
 }
