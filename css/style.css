@@ -640,7 +640,7 @@ header a {
   bottom: 0;
   background-color: #f4f4f4;
   border-radius: 25px 25px 0 0;
-  box-shadow: -4 1 15px #303030bb;
+  box-shadow: -4 0 15px grey;
   position: absolute;
   display: flex;
   flex-direction: row;
