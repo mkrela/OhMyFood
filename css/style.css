@@ -51,6 +51,7 @@
 .lds-roller {
   box-sizing: content-box;
   animation: spinner 2s ease-in-out;
+  scale: 1;
   opacity: 0;
 }
 
