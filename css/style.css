@@ -51,7 +51,7 @@
 .lds-roller {
   box-sizing: content-box;
   animation: spinner 2s ease-in-out;
-  scale: 1;
+  scale: 0;
   opacity: 0;
 }
 
@@ -88,7 +88,6 @@
   0% {
     opacity: 0.1;
     background-image: linear-gradient(#ff79da, #9356dc);
-    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -107,7 +106,6 @@
   100% {
     opacity: 1;
     background-image: linear-gradient(#ff79da, #9356dc);
-    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -640,7 +638,7 @@ header a {
   bottom: 0;
   background-color: #f4f4f4;
   border-radius: 25px 25px 0 0;
-  box-shadow: -4 0 15px grey;
+  box-shadow: -4 0 0 15px grey;
   position: absolute;
   display: flex;
   flex-direction: row;
