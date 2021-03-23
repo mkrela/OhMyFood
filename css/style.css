@@ -51,7 +51,6 @@
 .lds-roller {
   box-sizing: content-box;
   animation: spinner 2s ease-in-out;
-  scale: 0;
   opacity: 0;
 }
 
@@ -638,7 +637,7 @@ header a {
   bottom: 0;
   background-color: #f4f4f4;
   border-radius: 25px 25px 0 0;
-  box-shadow: -4 0 0 15px grey;
+  box-shadow: 0px -1px 1px  #dfdfdf;
   position: absolute;
   display: flex;
   flex-direction: row;
