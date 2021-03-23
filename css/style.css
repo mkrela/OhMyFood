@@ -51,7 +51,6 @@
 .lds-roller {
   box-sizing: content-box;
   animation: spinner 2s ease-in-out;
-  scale: 1;
   opacity: 0;
 }
 
@@ -89,7 +88,6 @@
     opacity: 0.1;
     background-image: linear-gradient(#ff79da, #9356dc);
     background-clip: text;
-    text-fill-color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -641,7 +639,7 @@ header a {
   bottom: 0;
   background-color: #f4f4f4;
   border-radius: 25px 25px 0 0;
-  box-shadow: -4 0 15px #303030bb;
+  box-shadow: -4 1 15px #303030bb;
   position: absolute;
   display: flex;
   flex-direction: row;
