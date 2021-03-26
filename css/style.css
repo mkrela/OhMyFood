@@ -573,7 +573,8 @@ header {
   position: relative;
 }
 header .header_logo {
-  margin-bottom: 0;
+  font-size: 3rem;
+  margin: 0;
   box-shadow: 0px 4px 4px #303030bb;
 }
 header .local {
@@ -586,7 +587,8 @@ header img {
 }
 header a {
   position: absolute;
-  left: 5vw;
+  left: 2vw;
+  top: 2vh;
   font-size: 2rem;
 }
 
