@@ -722,38 +722,35 @@ header a {
   justify-content: flex-start;
 }
 .plats .plats__type .plats__card .plats__card--name {
+  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   white-space: nowrap;
-  overflow: hidden;
   text-overflow: ellipsis;
   margin: 0;
   padding: 1em 0;
 }
 .plats .plats__type .plats__card .plats__card--name h3 {
+  width: 95%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  white-space: nowrap;
   margin: 0;
   padding-bottom: 0.7rem;
   font-weight: bold;
 }
 .plats .plats__type .plats__card .plats__card--description {
-  display: flex;
-  box-sizing: border-box;
-  flex-direction: row;
+  width: 95%;
   justify-content: space-between;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.plats .plats__type .plats__card .plats__card--description div {
-  padding-right: 4em;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  box-sizing: border-box;
-}
+
 .plats .plats__type .plats__card .plats__card--price {
   position: absolute;
-  top: 42%;
+  top: 35%;
   right: 1%;
   font-size: 1.3em;
   font-weight: bolder;
@@ -788,7 +785,7 @@ header a {
   right: 0;
   top: 0;
   height: 100%;
-  width: 15%;
+  width: 10%;
   background-color: #99e2d0;
   transform: translateX(150%);
   transition: transform 0.3s;
@@ -812,7 +809,7 @@ header a {
   transform: rotate(720deg);
 }
 .plats__card:hover .plats__card--price {
-  transform: translateX(-100%);
+  transform: translateX(-65%);
   transition-duration: 0.3s;
 }
 
