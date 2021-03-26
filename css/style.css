@@ -641,7 +641,12 @@ header a {
   position: absolute;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
+}
+
+.restaurant__heart {
+  position: relative;
+  width: 20%;
 }
 .restaurant__name h1 {
   font-size: 2rem;
